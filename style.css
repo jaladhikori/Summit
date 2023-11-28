@@ -10,8 +10,85 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--background);
 }
 
 body {
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  background-color: var(--background);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 100px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-size: 1rem;
+  margin-right: 40px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f26522;
+}
+
+nav .nav-icon {
+  display: flex;
+}
+
+nav .nav-icon a {
+  color: var(--secondary);
+  font-size: 1.25rem;
+  margin-left: 40px;
+}
+
+main .hero {
+  min-height: 100vh;
+  display: flex;
+  background-image: url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+  position: relative;
+}
+
+main .hero .info {
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .hero .info h6 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+main .hero .info h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+main.hero .info p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary);
 }
