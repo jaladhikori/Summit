@@ -43,7 +43,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #f26522;
+  color: var(--primary);
 }
 
 nav .nav-icon {
@@ -56,18 +56,19 @@ nav .nav-icon a {
   margin-left: 40px;
 }
 
-main .hero {
+.hero {
   min-height: 100vh;
+  justify-content: center;
   display: flex;
+  flex-direction: column;
   background-image: url("images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: 100;
   position: relative;
 }
 
-main .hero .info {
+.hero .info {
   padding: 0 100px;
   display: flex;
   flex-direction: column;
@@ -75,20 +76,62 @@ main .hero .info {
   justify-content: center;
 }
 
-main .hero .info h6 {
+.hero .info h6 {
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--secondary);
 }
 
-main .hero .info h1 {
+.hero .info h1 {
   font-size: 6rem;
   font-weight: 700;
   color: var(--secondary);
 }
 
-main.hero .info p {
+.hero .info p {
   font-size: 1rem;
   font-weight: 500;
   color: var(--secondary);
+}
+
+.button {
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  width: 11.8125rem;
+  height: 4.125rem;
+  border-radius: 2.0625rem;
+  border: 2px solid var(--secondary);
+  background-color: transparent;
+  margin: 4rem;
+  transition: color 0.3s ease;
+}
+
+.button:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.benefit {
+  display: flex;
+  justify-content: center;
+  gap: 3.75rem;
+  margin: 6.25rem;
+}
+
+.benefit .item {
+  display: flex;
+  align-items: center;
+}
+
+.benefit .item i{
+  font-size: 3rem;
+  color: var(--primary); 
+}
+
+.benefit .item p{
+  color: var(--secondary);
+  margin-left: 1.25rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
