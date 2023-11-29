@@ -18,12 +18,14 @@ body {
   background-color: var(--background);
 }
 
+/* Navbar */
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0 100px;
+  z-index: 9999;
 }
 
 nav ul {
@@ -56,19 +58,23 @@ nav .nav-icon a {
   margin-left: 40px;
 }
 
+/* Hero Section */
 .hero {
   min-height: 100vh;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  background-image: url("images/bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
+  z-index: 9999;
 }
 
 .hero .info {
+  margin-top: 100px;
   padding: 0 100px;
   display: flex;
   flex-direction: column;
@@ -92,6 +98,7 @@ nav .nav-icon a {
   font-size: 1rem;
   font-weight: 500;
   color: var(--secondary);
+  margin-bottom: 4rem;
 }
 
 .button {
@@ -103,7 +110,6 @@ nav .nav-icon a {
   border-radius: 2.0625rem;
   border: 2px solid var(--secondary);
   background-color: transparent;
-  margin: 4rem;
   transition: color 0.3s ease;
 }
 
@@ -124,14 +130,66 @@ nav .nav-icon a {
   align-items: center;
 }
 
-.benefit .item i{
+.benefit .item i {
   font-size: 3rem;
-  color: var(--primary); 
+  color: var(--primary);
 }
 
-.benefit .item p{
+.benefit .item p {
   color: var(--secondary);
   margin-left: 1.25rem;
   font-size: 1rem;
   font-weight: 400;
+}
+
+.about {
+  padding: 6.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about .column {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about .column .left {
+  display: flex;
+  flex-direction: column;
+}
+
+.about .column .left h2 {
+  color: var(--primary);
+  font-size: 3rem;
+  font-weight: 600;
+  padding-bottom: 1.25rem;
+  border-bottom: solid 1px;
+}
+
+.about .column .content {
+  width: 33rem;
+}
+
+.about .column .left h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary);
+  margin: 0.625rem 0;
+}
+
+.about .column .left .content p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary);
+  line-height: 150%;
+  margin-bottom: 2.5rem;
+}
+
+.about .column .right {
+}
+
+.about .column .right img {
+  width: 38.125rem;
+  height: 20.375rem;
+  border-radius: 1.875rem;
 }
